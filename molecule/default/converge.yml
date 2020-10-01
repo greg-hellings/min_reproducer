@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include min_reproducer"
+      debug:
+        var: molecule_yml.platforms

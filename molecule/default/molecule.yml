@@ -1,0 +1,16 @@
+dependency:
+  name: galaxy
+driver:
+  name: podman
+platforms:
+  - name: instance
+    image: centos:8
+    rootless: true
+provisioner:
+  name: ansible
+  inventory:
+    host_vars:
+      localhost:
+        molecule_no_log: false
+verifier:
+  name: ansible
