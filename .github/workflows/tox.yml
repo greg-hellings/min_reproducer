@@ -1,5 +1,8 @@
 name: tox
 
+on:
+  push:
+
 jobs:
   build:
     runs-on: ${{ matrix.target }}
