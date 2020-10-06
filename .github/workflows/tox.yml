@@ -6,10 +6,12 @@ on:
 jobs:
   build:
     runs-on: ${{ matrix.target }}
-    matrix:
-      target:
-        - ubuntu:18.04
-        - ubuntu:20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - ubuntu:18.04
+          - ubuntu:20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
